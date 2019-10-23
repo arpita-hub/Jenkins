@@ -22,13 +22,14 @@ Click on Add Build Step
 Select Execute Shell
 Write : echo "Hello World"
 Click on Apply and Save
-![image](folder/image.png)
+![image](jenkinsImg/jenk1.png)
 ```
 
 * Create a freestyle job to which take absolute path of a directory then
-```
+
  * List all files and directories inside that.
 
+```
 Click On new item
 Enter the name 
 Select the Freestyle Project
@@ -41,7 +42,7 @@ Select Execute Shell
 Write : cd /home/arpita/Documents/
 	ls
 Click on Apply and Save
-![image](jenkinsImg/image.png)
+![image](jenkinsImg/jenk2.png))
 ```
 
 
@@ -69,7 +70,7 @@ Select Execute Shell
 		echo "Directory not exists"
 		fi
 Click on Apply and Save
-![image](folder/image.png)
+![image](jenkinsImg/jenk3.png)
 ```
 
 * Print "Inappropriate permissions" if you don't have permissions to list files.
@@ -92,7 +93,7 @@ Write : cd ~/secrets/
 	echo "Inappropriate Permission "
 	fi
 Click on Apply and Save
-![image](folder/image.png)
+![image](jenkinsImg/jenk4.png)
 ```
 
 * Update the previously created freestyle job to only retain last 10 build history but not beyond 2 days.
@@ -107,7 +108,7 @@ Select Discard Old Build
 Enter Days to keep build : 2
 Max # of builds to keep : 10
 Click on Apply and Save
-![image](folder/image.png)
+
 ```
 
 * Clone the code available in the same repository.
@@ -129,7 +130,7 @@ Click on Apply and Save
 	Write : cd /home/arpita/Documents/Ninja/
 	sudo git clone https://github.com/arpita-hub/GitPractice.git
 	Click on Apply and Save.
-	![image](folder/image.png)
+	![image](jenkinsImg/jenk5.png)
 ```
 
 
@@ -151,6 +152,8 @@ Go to Build Triggers : GitHub Hook trigger for GITScmPolling.
 Go to GitHub Website : Go to Settings 
 			Select Webhooks
 			Add Webhooks
+
+![image](jenkinsImg/jenk8.png)
 ```
 
 * Enable colored console output
@@ -165,7 +168,7 @@ Go to Build Environment Section
 	ANSI color map : vga
 Click on Apply and Save
 
-![image](folder/image.png)
+![image](jenkinsImg/jenk6.png)
 ```
 ### Good to Do
 * Clone the code available in the same repository only if there is changes in *java* folder and only this folder should be checked out.
