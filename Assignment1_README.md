@@ -44,8 +44,9 @@ Click on Apply and Save
 ![image](jenkinsImg/image.png)
 ```
 
-```
+
    * Print a message "drectory not exist" if directory doesn't exist on file system
+```
 Click On new item
 Enter the name 
 Select the Freestyle Project
@@ -110,8 +111,9 @@ Click on Apply and Save
 ```
 
 * Clone the code available in the same repository.
-   ```
+ 
  * Using git protocol
+```
 	First we have to make some changes in /etc/sudoers file.
 	Add the line : jenkins ALL=(ALL) NOPASSWD: ALL
 	Save the file.
@@ -129,9 +131,10 @@ Click on Apply and Save
 	Click on Apply and Save.
 	![image](folder/image.png)
 ```
-```
-    * Using ssh protocol
-```
+
+
+  * Using ssh protocol
+
 * Update above jenkins job so that it should be able to identify if there is a code commit in last 5 minutes it should get triggered.
 
 ```
