@@ -26,7 +26,7 @@ Click on Apply and Save
 ```
 
 * Create a freestyle job to which take absolute path of a directory then
-```   
+```
  * List all files and directories inside that.
 
 Click On new item
@@ -41,11 +41,11 @@ Select Execute Shell
 Write : cd /home/arpita/Documents/
 	ls
 Click on Apply and Save
-![image](folder/image.png)
+![image](jenkinsImg/image.png)
 ```
 
 ```
-    * Print a message "drectory not exist" if directory doesn't exist on file system
+   * Print a message "drectory not exist" if directory doesn't exist on file system
 Click On new item
 Enter the name 
 Select the Freestyle Project
@@ -110,30 +110,48 @@ Click on Apply and Save
 ```
 
 * Clone the code available in the same repository.
-   ``` * Using git protocol
+   ```
+ * Using git protocol
 	First we have to make some changes in /etc/sudoers file.
 	Add the line : jenkins ALL=(ALL) NOPASSWD: ALL
 	Save the file.
-Click On new item
-Enter the name 
-Select the Freestyle Project
-Click ok 
-Open the Job
-Click on Configure
-Go to Build Section
-Click on Add Build Step
-Select Execute Shell
-Write : cd /home/arpita/Documents/Ninja/
-sudo git clone https://github.com/arpita-hub/GitPractice.git
-Click on Apply and Save.
-![image](folder/image.png)
+	Click On new item
+	Enter the name 
+	Select the Freestyle Project
+	Click ok 
+	Open the Job
+	Click on Configure
+	Go to Build Section
+	Click on Add Build Step
+	Select Execute Shell
+	Write : cd /home/arpita/Documents/Ninja/
+	sudo git clone https://github.com/arpita-hub/GitPractice.git
+	Click on Apply and Save.
+	![image](folder/image.png)
 ```
 ```
     * Using ssh protocol
 ```
 * Update above jenkins job so that it should be able to identify if there is a code commit in last 5 minutes it should get triggered.
-```   ```
+
+```
+Install Plugin : GitHub Integration
+Click on Configure
+Go to General Section : Select GitHub Project
+			Paste GitHub Project Url
+
+Go to Source Code Management : Select Git
+				Enter the Url of GitHub Project
+
+Go to Build Triggers : GitHub Hook trigger for GITScmPolling.
+
+Go to GitHub Website : Go to Settings 
+			Select Webhooks
+			Add Webhooks
+```
+
 * Enable colored console output
+
 ```
 Install AnsiColor Plugin
 	Adds ANSI coloring to the Console Output.
